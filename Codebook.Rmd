@@ -1,0 +1,34 @@
+---
+title: "Codebook"
+author: "1Bach"
+date: "12 11 2017"
+output: html_document
+---
+
+List of files:
+
+'features.txt': List of all 561 features.
+
+'activity_labels.txt': Links the class labels with the 6 different activity names.
+
+'train/X_train.txt': Training set.7352 observations of the 561 features, for 21 of the 30 volunteers.
+
+'train/y_train.txt': Training labels.
+
+'test/X_test.txt': Test set.2947 observations of the 561 features, for 9 of the 30 volunteers.
+
+'test/y_test.txt': Test labels. A vector of 2947 integers, denoting the ID of the volunteer related to each of the observations in X_test.txt.
+
+
+Features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
+A similar approach is taken with activity names through the activities variable.
+all_data merges x_data, y_data and subject_data in a big dataset.
+Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans().
+
+The set of variables that were estimated:
+
+mean(): Mean value
+std(): Standard deviation
+
+Transformation
+The dataset consists of 68 variables and 180 observations. All the values are aggreagated means within 30 subjects and 6 activities. 
