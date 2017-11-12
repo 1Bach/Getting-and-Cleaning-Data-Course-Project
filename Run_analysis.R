@@ -46,5 +46,5 @@ aggr.data <- aggregate(data.mean.std[, 3:ncol(data.mean.std)],
                        mean)
 
 #tidy dataset
-write.table(format(aggr.data, scientific=T), "tidy2.txt",
+write.table(format(aggr.data, scientific=T), "tidy.txt",
             row.names=F, col.names=F, quote=2)
